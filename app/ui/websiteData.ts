@@ -24,7 +24,7 @@ const websiteData: {pages:PageData[], websiteTitle:string}= {
     },
   ],
 
-  websiteTitle: "Website Title",
+  websiteTitle: "Beloveds Foundation",
 };
 
 export default websiteData;
