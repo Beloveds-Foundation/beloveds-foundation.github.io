@@ -2,29 +2,38 @@
 @plugin "daisyui"{
    themes: light --default
 }
+:root {
+  --violent-violet: #340C5C;
+  --whaling-waters: #2C7074;
+  --metallic-silver:#A9A9A9;
+
+}
+
 
 @font-face {
   font-family: BerlinXBold; /* set name */
   src: url(./../public/berlin.x-bold.ttf); /* url of the font */
 }
  .btn-custom {
-  color: #342463;
-  background-color: #ffaf94;
+  color: white;
+  background-color:var(--violent-violet);
  }
  .menu-custom{
-  background-color: #babae9;
+  background: white;
  }
+
 
  h1 {
   font-family: BerlinXBold; /* use font */
+
 }
 
 body{
-  color:  #342463;
+  color:  var(--violent-violet);
 }
 
 legend{
-  color: #342463;
+  color:var(--violent-violet);
 }
 
 

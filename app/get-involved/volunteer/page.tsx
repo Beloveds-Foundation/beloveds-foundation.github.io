@@ -1,6 +1,6 @@
 "use client";
 
-export default function Home() {
+export default function Page() {
   return (
     <div className={"hero-content flex-col lg:flex-row"}>
       <img
@@ -10,9 +10,7 @@ export default function Home() {
       />
 
       <div>
-        <h1 className="text-5xl text-center font-bold">
-          This is the home page
-        </h1>
+        <h1 className="text-5xl text-center font-bold">Volunteer</h1>
 
         <p className="py-4 text-center lg:max-w-9/10 m-auto ">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
