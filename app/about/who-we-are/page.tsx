@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <div className={"hero-content flex-col lg:flex-row"}>
       <img
-        alt={"a cute little oranage"}
+        alt={"a photo of an orange cat looking happy"}
         src={"/images/happy-cat.png"}
         className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg shadow-2xl"
       />

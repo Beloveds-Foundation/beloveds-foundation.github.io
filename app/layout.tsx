@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import pageData from "./ui/websiteData";
 import { Menu } from "./ui/Menu";
+import { FaInstagram, FaFacebook } from "react-icons/fa6";
 
 export const metadata: Metadata = {
   title: pageData.websiteTitle,
@@ -24,6 +25,26 @@ export default function RootLayout({
           </div>
         </div>
       </body>
+      <div className="footer">
+        <p> Beloveds is a 501(c)(3) nonprofit organization. EIN: 88-0826813</p>
+        <div
+          className="flex flex-row
+"
+        >
+          <a
+            className="icon"
+            href="https://www.instagram.com/belovedsfoundation/"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            className="icon"
+            href="https://www.facebook.com/rachaelbelovedsfoundation"
+          >
+            <FaFacebook />
+          </a>
+        </div>
+      </div>
     </html>
   );
 }
