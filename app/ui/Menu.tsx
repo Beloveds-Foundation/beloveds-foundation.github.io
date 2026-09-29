@@ -1,8 +1,13 @@
 "use client";
 import websiteData from "./websiteData";
 import { MenuItems, MoblieMenuItems } from "./MenuItems";
+import React from "react";
 
 export function Menu() {
+  const [showMoblieBar, setShowMoblieBar] = React.useState(false);
+  const onClick = () => setShowMoblieBar(!showMoblieBar);
+  console.log(showMoblieBar);
+
   return (
     <div className="max-lg:collapse bg-base-200  shadow-sm w-full rounded-md ">
       <input id="navbar-1-toggle" className="peer hidden" type="checkbox" />
@@ -12,7 +17,11 @@ export function Menu() {
       ></label>
       <div className="collapse-title navbar menu-custom">
         <div className="navbar-start">
-          <label htmlFor="navbar-1-toggle" className="btn btn-ghost lg:hidden">
+          <label
+            htmlFor="navbar-1-toggle"
+            className="btn btn-ghost lg:hidden"
+            onClick={onClick}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -28,7 +37,7 @@ export function Menu() {
               />
             </svg>
           </label>
-          <a href="./">
+          <a href="/">
             <img
               alt={"a photo of an orange cat looking happy"}
               src={"/images/beloveds-logo.png"}
@@ -52,10 +61,13 @@ export function Menu() {
           </a>
         </div>
       </div>
-
-      <div className=" lg:hidden z-1 m-2">
-        <MoblieMenuItems items={websiteData.pages} />
-      </div>
+      {showMoblieBar ? (
+        <div className="flex justify-center">
+          <div className=" lg:hidden z-1 m-2  text-xl">
+            <MoblieMenuItems items={websiteData.pages} />
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
