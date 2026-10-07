@@ -2,7 +2,7 @@
 
 export default function Page() {
   return (
-    <div className={"hero-content flex-col"}>
+    <div>
       <div className={"hero-content flex-col lg:flex-row"}>
         <img
           alt={"a photo of an orange cat looking happy"}
