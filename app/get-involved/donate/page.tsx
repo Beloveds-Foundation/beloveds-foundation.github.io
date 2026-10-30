@@ -1,5 +1,6 @@
 "use client";
 
+// We are hacking this because givebutter doesn't have a compatible React widget. We are using the HTML one and then ignoring allowing the odd tag.
 declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
@@ -63,13 +64,13 @@ export default function Page() {
         </p>
         <div className=" text-center mb-5 mt-3">
           <a
-            className="bg-brand box-border border shadow-xs font-medium text-sm px-4 py-2.5 m-3"
+            className="bg-brand box-border border  font-medium text-sm px-4 py-2.5 m-3"
             href="https://venmo.com/u/belovedsfoundation"
           >
             Venmo
           </a>
           <a
-            className="bg-brand box-border border shadow-xs font-medium text-sm px-4 py-2.5 m-3"
+            className="bg-brand box-border border  font-medium text-sm px-4 py-2.5 m-3"
             href="https://www.paypal.com/us/fundraiser/charity/4763046"
           >
             Pay Pal
@@ -103,7 +104,7 @@ export default function Page() {
 
         <div className=" text-center mb-5 mt-3">
           <a
-            className="bg-brand box-border border shadow-xs font-medium text-sm px-4 py-2.5 m-3"
+            className="bg-brand box-border border  font-medium text-sm px-4 py-2.5 m-3"
             href="https://www.amazon.com/hz/wishlist/ls/38FCC9KVI044C?ref_=wl_share"
           >
             Amazon Wish list
@@ -128,7 +129,7 @@ export default function Page() {
 
         <div className=" text-center mb-5 mt-3">
           <a
-            className="bg-brand box-border border shadow-xs font-medium text-sm px-4 py-2.5 m-3"
+            className="bg-brand box-border border xs font-medium text-sm px-4 py-2.5 m-3"
             href="give-supplies"
           >
             What We Accept

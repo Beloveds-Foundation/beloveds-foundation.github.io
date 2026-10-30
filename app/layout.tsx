@@ -22,13 +22,10 @@ export default function RootLayout({
         ></script>
       </head>
       <body>
-        <div className="hero min-h-screen flex flex-col">
-          <Menu />
-          <div className="main-box">
-            <div className={"hero-content flex-col lg:flex-row"}>
-              <div>{children}</div>
-            </div>
-          </div>
+        <Menu />
+
+        <div className={"hero-content flex-col justify-self-center"}>
+          <div>{children}</div>
         </div>
       </body>
       <div className="footer">

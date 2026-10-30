@@ -3,7 +3,7 @@
 export default function Home() {
   return (
     <div className={"  flex-col"}>
-      <div className="flex lg:flex-row md:flex-col sm:flex-col xsm:flex-col md:items-center p-20 bg-[url('./../public/images/kittens2.jpg')] bg-center bg-cover">
+      <div className="flex lg:flex-row flex-col md:items-center sm:items-center lg:p-20 bg-[url('./../public/images/kittens2.jpg')] bg-center bg-cover">
         <div></div>
         <div className="m-10 mt-20 bg-white/75 rounded-lg p-5 w-100">
           <h1 className="text-5xl text-center font-bold">
@@ -17,7 +17,7 @@ export default function Home() {
       </div>
       <hr className="border border-custom m-10 w-full" />
 
-      <div className="flex lg:flex-row md:flex-col sm:flex-col purple">
+      <div className="flex lg:flex-row flex-col purple">
         <div className="m-10">
           <h1 className="text-5xl text-center font-bold">Our Mission</h1>
           <p className="py-4 text-center lg:max-w-9/10 m-auto ">
@@ -33,7 +33,7 @@ export default function Home() {
         <img
           alt={"a photo of an orange cat looking happy"}
           src={"/images/dog4.jpg"}
-          className="lg:max-w-sm  object-contain  rounded-lg shadow-2xl"
+          className="lg:max-w-sm  object-contain  rounded-lg "
         />
       </div>
       <hr className="border border-custom m-10 w-full" />
@@ -41,39 +41,46 @@ export default function Home() {
       <div className="flex flex-col">
         <h1 className="text-5xl text-center font-bold m-3">Get Involved</h1>
 
-        <div className="flex lg:flex-row md:flex-col sm:flex-col gap-10 justify-center ">
+        <div
+          className="flex lg:flex-row flex-col gap-10 justify-center justify-items-center justify-items-center
+
+"
+        >
           <div className="flex flex-col">
             <img
               alt={"a photo of an orange cat looking happy"}
               src={"/images/dog.jpg"}
-              className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg shadow-2xl m-5 h-75"
+              className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg  m-5 h-75 "
             />
-            <a className="btn m-3 btn-custom" href="/get-involved/donate">
-              Volunteer
-            </a>
+            <div className=" text-center">
+              <a className="btn m-3 btn-custom " href="/get-involved/donate">
+                Volunteer
+              </a>
+            </div>
           </div>
           <div className="flex flex-col">
             <img
               alt={"a photo of an orange cat looking happy"}
               src={"/images/donations.png"}
-              className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg shadow-2xl m-5 h-75"
+              className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg  m-5 h-75"
             />
-            <a className="btn m-3 btn-custom" href="/get-involved/donate">
-              Give Supplies
-            </a>
+            <div className=" text-center">
+              <a className="btn m-3 btn-custom" href="/get-involved/donate">
+                Give Supplies
+              </a>
+            </div>
           </div>
           <div className="flex flex-col">
             <img
               alt={"a photo of an orange cat looking happy"}
               src={"/images/poppy.jpg"}
-              className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg shadow-2xl m-5 h-75"
+              className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg  m-5 h-75"
             />
-            <a
-              className="btn m-3 btn-custom center"
-              href="/get-involved/donate"
-            >
-              Donate
-            </a>
+            <div className=" text-center">
+              <a className="btn m-3 btn-custom" href="/get-involved/donate">
+                Donate
+              </a>
+            </div>
           </div>
         </div>
       </div>

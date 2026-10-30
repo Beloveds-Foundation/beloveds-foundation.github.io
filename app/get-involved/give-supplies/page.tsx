@@ -94,7 +94,7 @@ export default function Page() {
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </div>
-      <div className="hero-content">
+      <div className="lg:hero-content">
         <Form />
       </div>
 

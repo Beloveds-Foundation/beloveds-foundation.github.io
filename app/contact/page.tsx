@@ -12,7 +12,9 @@ export default function Page() {
           we’ll get back to you as soon as we can.
         </p>
       </div>
-      <Form />
+      <div className="lg:hero-content w-full">
+        <Form />
+      </div>
     </div>
   );
 }

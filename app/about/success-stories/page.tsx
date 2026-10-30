@@ -24,7 +24,7 @@ export default function Page() {
         <img
           alt={"a photo of an orange cat looking happy"}
           src={"/images/happy-cat.png"}
-          className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg shadow-2xl"
+          className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg "
         />
 
         <div>
@@ -57,7 +57,7 @@ export default function Page() {
         <img
           alt={"a photo of an orange cat looking happy"}
           src={"/images/happy-cat.png"}
-          className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg shadow-2xl"
+          className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg"
         />
 
         <div>
@@ -90,7 +90,7 @@ export default function Page() {
         <img
           alt={"a photo of an orange cat looking happy"}
           src={"/images/happy-cat.png"}
-          className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg shadow-2xl"
+          className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg "
         />
 
         <div>

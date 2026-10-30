@@ -24,7 +24,7 @@ export default function Page() {
           </p>
           <p className="text-center m-3">
             <a
-              className="bg-brand box-border border  shadow-xs font-medium text-sm px-4 py-2.5"
+              className="bg-brand box-border border   font-medium text-sm px-4 py-2.5"
               href="https://www.idealist.org/en/nonprofit/1b630a449bf042898e7781c8b74b682d-beloveds-animal-rescue-relief-foundation-seattle"
             >
               View Current Roles on Volunteer Match
@@ -51,7 +51,9 @@ export default function Page() {
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
 
-        <Form />
+        <div className="lg:hero-content w-full">
+          <Form />
+        </div>
         <hr className="border border-custom m-10 w-full" />
       </div>
     </>

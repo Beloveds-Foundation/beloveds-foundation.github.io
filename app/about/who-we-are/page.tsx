@@ -7,7 +7,7 @@ export default function Page() {
         <img
           alt={"a photo of an orange cat looking happy"}
           src={"/images/happy-cat.png"}
-          className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg shadow-2xl"
+          className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg "
         />
 
         <div>
@@ -31,7 +31,7 @@ export default function Page() {
         <img
           alt={"a photo of an orange cat looking happy"}
           src={"/images/dog2.jpg"}
-          className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg shadow-2xl"
+          className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg "
         />
         <div>
           <h1 className="text-5xl text-center font-bold">
@@ -54,6 +54,7 @@ export default function Page() {
 
       <div className="flex flex-col ">
         <h1 className="text-5xl text-center font-bold m-3">Our Impact</h1>
+        <h3 className="text-center text-xl font-medium m-3">Since 2022</h3>
 
         <div className="flex lg:flex-row md:flex-col sm:flex-col gap-10 justify-center">
           <div className="flex flex-col items-center ">
