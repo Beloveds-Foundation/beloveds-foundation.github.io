@@ -1,5 +1,13 @@
 "use client";
 
+declare module "react" {
+  namespace JSX {
+    interface IntrinsicElements {
+      "givebutter-widget": any;
+    }
+  }
+}
+
 export default function Page() {
   return (
     <>
