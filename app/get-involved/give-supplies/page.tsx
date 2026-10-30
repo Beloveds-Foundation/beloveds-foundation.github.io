@@ -94,7 +94,9 @@ export default function Page() {
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </div>
-      <Form />
+      <div className="hero-content">
+        <Form />
+      </div>
 
       <hr className="border border-custom m-10 w-full" />
     </>
