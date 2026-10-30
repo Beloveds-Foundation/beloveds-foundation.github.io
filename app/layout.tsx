@@ -15,6 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          async
+          src="https://widgets.givebutter.com/latest.umd.cjs?acct=yWT8RpeYYhuepNXo&p=other"
+        ></script>
+      </head>
       <body>
         <div className="hero min-h-screen flex flex-col">
           <Menu />

@@ -7,15 +7,10 @@ export default function Page() {
     <>
       <div
         className={
-          "hero-content flex-col lg:flex-row items-center justify-center justify-items-center "
+          " flex-col lg:flex-row p-20 bg-[url('./../public/images/cat4.jpg')] bg-center bg-cover"
         }
       >
-        <img
-          alt={"a photo of an orange cat looking happy"}
-          src={"/images/happy-cat.png"}
-          className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg shadow-2xl"
-        />
-        <div>
+        <div className="bg-white/75 rounded-lg p-5 w-100">
           <h1 className="text-5xl text-center font-bold">Volunteer</h1>
 
           <p className="py-4 text-center lg:max-w-9/10 m-auto ">

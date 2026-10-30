@@ -6,6 +6,7 @@
   --violent-violet: #340C5C;
   --whaling-waters: #2C7074;
   --metallic-silver:#A9A9A9;
+  --contrast-whaling-waters: #67C1C5;
 
 }
 
@@ -26,6 +27,11 @@
   font-size: 20px;
   font-weight: 900;
    color:var(--violent-violet);
+
+}
+.bluebg{
+  background-color: var(--whaling-waters);
+  color:white
 
 }
 

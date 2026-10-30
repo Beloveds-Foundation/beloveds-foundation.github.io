@@ -2,87 +2,50 @@
 
 export default function Home() {
   return (
-    <div className={"hero-content flex-col"}>
-      <div className="flex lg:flex-row md:flex-col sm:flex-col xsm:flex-col md:items-center">
-        <div>
-          <img
-            alt={"a photo of an orange cat looking happy"}
-            src={"/images/happy-cat.png"}
-            className="lg:max-w-sm  object-contain  rounded-lg shadow-2xl"
-          />
-        </div>
-        <div className="m-10 mt-20">
+    <div className={"  flex-col"}>
+      <div className="flex lg:flex-row md:flex-col sm:flex-col xsm:flex-col md:items-center p-20 bg-[url('./../public/images/kittens2.jpg')] bg-center bg-cover">
+        <div></div>
+        <div className="m-10 mt-20 bg-white/75 rounded-lg p-5 w-100">
           <h1 className="text-5xl text-center font-bold">
             Beloveds Animal Relief Rescue Foundation
           </h1>
           <p className="py-4 text-center lg:max-w-9/10 m-auto ">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            Leading the way in supporting the mission of animal relief rescues.
+            Any support makes a difference in the lives of animals.
           </p>
         </div>
       </div>
       <hr className="border border-custom m-10 w-full" />
 
-      <div className="flex lg:flex-row md:flex-col sm:flex-col">
+      <div className="flex lg:flex-row md:flex-col sm:flex-col purple">
         <div className="m-10">
-          <h1 className="text-5xl text-center font-bold">Who We Serve</h1>
+          <h1 className="text-5xl text-center font-bold">Our Mission</h1>
           <p className="py-4 text-center lg:max-w-9/10 m-auto ">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            We collect pet supplies from the community, businesses and
+            distributors, then provide these donations directly to pet rescues,
+            shelters, food banks, community outreach groups and feral cat colony
+            caretakers, depending on urgency of need and specialty of service.
+            This allows the pet organizations to focus on their animals clients,
+            paying for medical needs, transportation and other urgent services.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-3">
-          <div>
-            <img
-              alt={"a photo of an orange cat looking happy"}
-              src={"/images/happy-cat.png"}
-              className="rounded-lg shadow-2xl"
-            />
-          </div>
-          <div>
-            <img
-              alt={"a photo of an orange cat looking happy"}
-              src={"/images/happy-cat.png"}
-              className="rounded-lg shadow-2xl"
-            />
-          </div>
-          <div>
-            <img
-              alt={"a photo of an orange cat looking happy"}
-              src={"/images/happy-cat.png"}
-              className="rounded-lg shadow-2xl "
-            />
-          </div>
-          <div>
-            <img
-              alt={"a photo of an orange cat looking happy"}
-              src={"/images/happy-cat.png"}
-              className="rounded-lg shadow-2xl"
-            />
-          </div>
-        </div>
+        <img
+          alt={"a photo of an orange cat looking happy"}
+          src={"/images/dog4.jpg"}
+          className="lg:max-w-sm  object-contain  rounded-lg shadow-2xl"
+        />
       </div>
       <hr className="border border-custom m-10 w-full" />
 
       <div className="flex flex-col">
         <h1 className="text-5xl text-center font-bold m-3">Get Involved</h1>
 
-        <div className="flex lg:flex-row md:flex-col sm:flex-col gap-10">
+        <div className="flex lg:flex-row md:flex-col sm:flex-col gap-10 justify-center ">
           <div className="flex flex-col">
             <img
               alt={"a photo of an orange cat looking happy"}
-              src={"/images/happy-cat.png"}
+              src={"/images/dog.jpg"}
               className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg shadow-2xl m-5 h-75"
             />
             <a className="btn m-3 btn-custom" href="/get-involved/donate">
@@ -92,7 +55,7 @@ export default function Home() {
           <div className="flex flex-col">
             <img
               alt={"a photo of an orange cat looking happy"}
-              src={"/images/happy-cat.png"}
+              src={"/images/donations.png"}
               className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg shadow-2xl m-5 h-75"
             />
             <a className="btn m-3 btn-custom" href="/get-involved/donate">
@@ -102,7 +65,7 @@ export default function Home() {
           <div className="flex flex-col">
             <img
               alt={"a photo of an orange cat looking happy"}
-              src={"/images/happy-cat.png"}
+              src={"/images/poppy.jpg"}
               className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg shadow-2xl m-5 h-75"
             />
             <a
