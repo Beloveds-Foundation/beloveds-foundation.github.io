@@ -92,12 +92,12 @@ export default function Page() {
       <div>
         <h1 className="text-5xl text-center font-bold">Amazon Wish List</h1>
 
-        <div className=" text-center mb-5 mt-3">
+        <div className=" text-center mb-5 mt-10">
           <a
             className="bg-brand box-border border  font-medium text-sm px-4 py-2.5 m-3"
             href="https://www.amazon.com/hz/wishlist/ls/38FCC9KVI044C?ref_=wl_share"
           >
-            Amazon Wish list
+            Shop Directly
           </a>
         </div>
       </div>
@@ -107,9 +107,9 @@ export default function Page() {
       <div>
         <h1 className="text-5xl text-center font-bold">In-Kind Donations</h1>
 
-        <div className=" text-center mb-5 mt-3">
+        <div className=" text-center mb-5 mt-10">
           <a
-            className="bg-brand box-border border xs font-medium text-sm px-4 py-2.5 m-3"
+            className="bg-brand box-border border xs font-medium text-sm px-4 py-2.5 m-3 "
             href="give-supplies"
           >
             What We Accept
