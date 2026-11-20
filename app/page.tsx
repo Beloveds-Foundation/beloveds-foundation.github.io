@@ -73,7 +73,7 @@ export default function Home() {
           <div className="flex flex-col">
             <img
               alt={""}
-              src={"/images/poppy.jpg"}
+              src={"/images/cat3.jpg"}
               className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg  m-5 h-75"
             />
             <div className=" text-center">
