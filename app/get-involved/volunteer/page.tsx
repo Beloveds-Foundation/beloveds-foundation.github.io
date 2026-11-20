@@ -1,6 +1,6 @@
 "use client";
 
-import Form from "@/app/ui/Form";
+import { Form, VOLUNTEER_ACCESS_KEY } from "@/app/ui/Form";
 
 export default function Page() {
   return (
@@ -50,7 +50,7 @@ export default function Page() {
         </p>
 
         <div className="lg:hero-content w-full">
-          <Form />
+          <Form formName="volunteer" access_key={VOLUNTEER_ACCESS_KEY} />
         </div>
         <hr className="border border-custom m-10 w-full" />
       </div>

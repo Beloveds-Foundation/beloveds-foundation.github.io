@@ -5,7 +5,7 @@ export default function Page() {
     <div>
       <div className={"hero-content flex-col lg:flex-row"}>
         <img
-          alt={"a photo of an orange cat looking happy"}
+          alt={""}
           src={"/images/happy-cat.png"}
           className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg "
         />
@@ -29,7 +29,7 @@ export default function Page() {
 
       <div className={"hero-content flex-col lg:flex-row-reverse"}>
         <img
-          alt={"a photo of an orange cat looking happy"}
+          alt={""}
           src={"/images/dog2.jpg"}
           className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg "
         />
@@ -59,7 +59,7 @@ export default function Page() {
         <div className="flex lg:flex-row md:flex-col sm:flex-col gap-10 justify-center">
           <div className="flex flex-col items-center ">
             <img
-              alt={"a photo of an orange cat looking happy"}
+              alt={""}
               src={"/images/dog-bowl-icon.png"}
               className="lg:max-w-sm md:max-w-sm object-contain md:object-cover m-5 h-30 p-2"
             />
@@ -67,7 +67,7 @@ export default function Page() {
           </div>
           <div className="flex flex-col items-center">
             <img
-              alt={"a photo of an orange cat looking happy"}
+              alt={""}
               src={"/images/paw-icon.png"}
               className="lg:max-w-sm md:max-w-sm object-contain md:object-cover  m-5 h-30 p-5"
             />
@@ -75,7 +75,7 @@ export default function Page() {
           </div>
           <div className="flex flex-col items-center">
             <img
-              alt={"a photo of an orange cat looking happy"}
+              alt={""}
               src={"/images/handshake-icon.png"}
               className="lg:max-w-sm md:max-w-sm object-contain md:object-cover  m-5 h-30"
             />
@@ -91,14 +91,14 @@ export default function Page() {
         <div className="flex flex-row items-center">
           <div>
             <img
-              alt={"a photo of an orange cat looking happy"}
+              alt={""}
               src={"/images/west-seattle-foodbank.png"}
               className=" object-scale-down h-50"
             />
           </div>
           <div>
             <img
-              alt={"a photo of an orange cat looking happy"}
+              alt={""}
               src={"/images/One-Health-Clinic-logo.jpg"}
               className="  object-scale-down h-50"
             />

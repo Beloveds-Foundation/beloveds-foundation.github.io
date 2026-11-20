@@ -31,7 +31,7 @@ export default function Home() {
         </div>
 
         <img
-          alt={"a photo of an orange cat looking happy"}
+          alt={""}
           src={"/images/dog4.jpg"}
           className="lg:max-w-sm  object-contain  rounded-lg "
         />
@@ -48,7 +48,7 @@ export default function Home() {
         >
           <div className="flex flex-col">
             <img
-              alt={"a photo of an orange cat looking happy"}
+              alt={""}
               src={"/images/dog.jpg"}
               className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg  m-5 h-75 "
             />
@@ -60,7 +60,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col">
             <img
-              alt={"a photo of an orange cat looking happy"}
+              alt={""}
               src={"/images/donations.png"}
               className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg  m-5 h-75"
             />
@@ -72,7 +72,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col">
             <img
-              alt={"a photo of an orange cat looking happy"}
+              alt={""}
               src={"/images/poppy.jpg"}
               className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg  m-5 h-75"
             />

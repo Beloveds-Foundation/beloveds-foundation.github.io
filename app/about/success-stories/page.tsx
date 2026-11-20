@@ -22,7 +22,7 @@ export default function Page() {
 
       <div className={"hero-content flex-col lg:flex-row"}>
         <img
-          alt={"a photo of an orange cat looking happy"}
+          alt={""}
           src={"/images/happy-cat.png"}
           className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg "
         />
@@ -55,7 +55,7 @@ export default function Page() {
 
       <div className={"hero-content flex-col lg:flex-row-reverse"}>
         <img
-          alt={"a photo of an orange cat looking happy"}
+          alt={""}
           src={"/images/happy-cat.png"}
           className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg"
         />
@@ -88,7 +88,7 @@ export default function Page() {
 
       <div className={"hero-content flex-col lg:flex-row"}>
         <img
-          alt={"a photo of an orange cat looking happy"}
+          alt={""}
           src={"/images/happy-cat.png"}
           className="lg:max-w-sm md:max-w-sm object-contain md:object-cover rounded-lg "
         />

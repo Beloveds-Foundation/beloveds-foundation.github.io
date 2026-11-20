@@ -1,6 +1,6 @@
 "use client";
 
-import Form from "../ui/Form";
+import { CONTACT_ACCESS_KEY, Form } from "../ui/Form";
 
 export default function Page() {
   return (
@@ -13,7 +13,7 @@ export default function Page() {
         </p>
       </div>
       <div className="lg:hero-content w-full">
-        <Form />
+        <Form formName="contact" access_key={CONTACT_ACCESS_KEY} />
       </div>
     </div>
   );

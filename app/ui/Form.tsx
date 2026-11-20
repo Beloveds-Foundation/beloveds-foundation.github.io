@@ -2,128 +2,155 @@
 import { redirect } from "next/navigation";
 import { useState } from "react";
 
-type FormInfo = {
-  name: string;
-  email: string;
-  message: string;
-  phone: string;
+import { FaCheckCircle } from "react-icons/fa";
+import { RiMailSendLine } from "react-icons/ri";
+import { MdError } from "react-icons/md";
+
+const SUCCESSFUL_RESPONSE_MESSAGE =
+  "Message successfuly sent! We'll get back to you as soon as possible.";
+
+const ERROR_RESPONSE_MESSAGE =
+  "Message failed to send. Please try again later.";
+
+const SENDING_MESSAGE = "Sending...";
+
+enum formStatus {
+  unsent, //0
+  sending, //1
+  error, //2
+  success, //3
+}
+
+const formResponses: {
+  [key: (typeof formStatus)[number]]: {
+    icon: React.ReactNode;
+    message: string;
+  };
+} = {
+  3: {
+    icon: <FaCheckCircle size={70} className="fill-green-500 mb-5" />,
+    message: SUCCESSFUL_RESPONSE_MESSAGE,
+  },
+  2: {
+    icon: <MdError size={70} className="fill-red-500 mb-5" />,
+    message: ERROR_RESPONSE_MESSAGE,
+  },
+  1: {
+    icon: <RiMailSendLine size={70} className=" mb-5" />,
+    message: SENDING_MESSAGE,
+  },
 };
 
-// add the form key here from web3froms
-// don't worry it's public
-const WEB_3_FORM_KEY = "";
+export const CONTACT_ACCESS_KEY = "";
+export const VOLUNTEER_ACCESS_KEY = "";
+export const DONATE_SUPPLIES_ACCESS_KEY = "";
 
-export default function Form() {
-  const [answer, setAnswer] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-
-  function handleChange(e: { target: HTMLInputElement }) {
-    // we force a deep copy here since we want re-render to trigger when sub attribute updated
-    let copy: { [key: string]: string } = JSON.parse(JSON.stringify(answer));
-    copy[e.target.name as string] = e.target.value;
-    setAnswer(copy as FormInfo);
-  }
-
-  const [loading, setLoading] = useState(false);
-
+export function Form({
+  access_key,
+  formName,
+}: {
+  formName: string;
+  access_key: string;
+}) {
+  const [formResult, setFormResult] = useState(formStatus.unsent);
   const onSubmit = async (event: any) => {
     event.preventDefault();
-    setLoading(true);
-
+    setFormResult(formStatus.unsent);
     const formData = new FormData(event.target);
-    formData.append("access_key", WEB_3_FORM_KEY);
+    formData.append("access_key", access_key);
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: formData,
     });
-    const data = await response.json();
-    data.success
-      ? redirect(`contact/submit?res=1`)
-      : redirect("contact/submit?res=0");
-  };
-  return (
-    <div>
-      <form onSubmit={onSubmit}>
-        <div>
-          <legend className="fieldset-legend  flex flex-col items-center m-1">
-            Name:
-          </legend>
-          <input
-            type="text"
-            className="input w-full"
-            placeholder="Type here"
-            name="name"
-            onChange={handleChange}
-            required
-            maxLength={30}
-          />
-        </div>
 
-        <div>
-          <legend className="fieldset-legend flex flex-col items-center m-1">
-            Email:
-          </legend>
-          <label className="input validator w-full">
+    const data = await response.json();
+    if (data.success) {
+      setFormResult(formStatus.success);
+      event.target.reset();
+    } else {
+      setFormResult(formStatus.error);
+    }
+  };
+
+  return (
+    <>
+      {formResult == formStatus.unsent ? (
+        <form onSubmit={onSubmit}>
+          <input type="hidden" name="formType" value={formName} />
+          <div>
+            <legend className="fieldset-legend  required flex flex-col items-center m-1">
+              Name *
+            </legend>
             <input
-              type="email"
-              placeholder="mail@site.com"
+              type="text"
+              className="input w-full"
+              name="name"
               required
-              name="email"
-              onChange={handleChange}
               maxLength={30}
             />
-          </label>
-          <div className="validator-hint hidden">Enter valid email address</div>
-        </div>
+          </div>
+          <div>
+            <legend className="fieldset-legend flex flex-col items-center m-1">
+              Email *
+            </legend>
+            <label className="input validator w-full">
+              <input
+                type="email"
+                placeholder="mail@site.com"
+                required
+                name="email"
+                maxLength={30}
+              />
+            </label>
+            <div className="validator-hint hidden">
+              Enter valid email address
+            </div>
+          </div>
+          <div>
+            <legend className="fieldset-legend flex flex-col items-center m-1 ">
+              Phone
+            </legend>
+            <label className="input validator w-full">
+              <input
+                type="phone"
+                placeholder="(000) 000-0000"
+                name="phone"
+                maxLength={14}
+                // only supports US numbers
+                pattern="\(?\d{3}\)?-? *\d{3}-? *-?\d{4}"
+              />
+            </label>
+            <div className="validator-hint hidden">
+              Enter Vaild Phone Number
+            </div>
+          </div>
 
-        <div>
-          <legend className="fieldset-legend flex flex-col items-center m-1 ">
-            Phone:
-          </legend>
-          <label className="input validator w-full">
-            <input
-              type="phone"
-              placeholder="(xxx)xxxxxx"
-              required
-              name="phone"
-              onChange={handleChange}
-              maxLength={10}
-            />
-          </label>
-          <div className="validator-hint hidden">Enter Vaild Phone Number</div>
-        </div>
-
-        <div>
           <div>
             <legend className="fieldset-legend  flex flex-col items-center m-1">
-              Message:
+              Message *
             </legend>
             <textarea
               className="textarea h-50 w-full lg:min-w-100 md:min-w-100"
               placeholder="Your messesage goes here"
               name="message"
               required
-              onChange={handleChange as any}
               maxLength={300}
             ></textarea>
           </div>
-        </div>
-        <div className=" mt-5 flex flex-col items-center">
-          <button
-            className="btn btn-custom "
-            id="submit"
-            type="submit"
-            disabled={loading}
-          >
-            Submit
-          </button>
-        </div>
-      </form>
-    </div>
+
+          <div className=" mt-5 flex flex-col items-center">
+            <button className="btn btn-custom " id="submit" type="submit">
+              Submit
+            </button>
+          </div>
+        </form>
+      ) : (
+        <p className="flex flex-col text-center  items-center">
+          {formResponses[formResult].icon}
+          {formResponses[formResult].message}
+        </p>
+      )}
+    </>
   );
 }

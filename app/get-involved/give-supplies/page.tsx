@@ -1,6 +1,6 @@
 "use client";
 
-import Form from "@/app/ui/Form";
+import { DONATE_SUPPLIES_ACCESS_KEY, Form } from "./../../ui/Form";
 
 export default function Page() {
   return (
@@ -95,7 +95,10 @@ export default function Page() {
         </p>
       </div>
       <div className="lg:hero-content">
-        <Form />
+        <Form
+          formName="donate-supplies"
+          access_key={DONATE_SUPPLIES_ACCESS_KEY}
+        />
       </div>
 
       <hr className="border border-custom m-10 w-full" />

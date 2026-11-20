@@ -39,7 +39,7 @@ export function Menu() {
           </label>
           <a href="/">
             <img
-              alt={"a photo of an orange cat looking happy"}
+              alt={""}
               src={"/images/beloveds-logo.png"}
               className="h-15 m-2"
             />
